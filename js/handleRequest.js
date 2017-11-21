@@ -12,7 +12,7 @@ function onTextClick() {
 		function processOK(response) {
 			console.log('OK');
 			$('#loading').hide();
-			$('#id_contextdump').prepend(createnewText('Response from Watson is Age range\n\n' + response));	
+			$('#id_contextdump').prepend(createnewText('Response from Watson: ' + response));	
         	//$('#id_contextdump').val(response.images[0].faces[0].age);
         	//$('#id_contextdump').append(createnewText(response));
         	//$('#id_contextdump').append(createnewDiv($('#id_urltext').val()));
@@ -52,7 +52,7 @@ function onTextClick() {
         } 
 
     	$('#loading').show();
-		$('#id_contextdump').prepend(createnewDiv($('#id_urltext').val()));
+		//$('#id_contextdump').prepend(createnewDiv($('#id_urltext').val()));
         $('#id_contextdump').show();
 		
 		invokeAjax(temp_url); 

@@ -53,7 +53,7 @@ app.post("/api/chat", function (request, response) {
   	else {
     	console.log(JSON.stringify(res, null, 2));
     	//response.send(JSON.stringify(res, null, 2));
-    	response.send(JSON.stringify(res, null,2));
+    	response.send(JSON.stringify(res.output.text, null,2));
 	}
 
 	});
