@@ -35,7 +35,7 @@ function onTextClick() {
 			}
 			$.ajax({
 				type: 'POST',
-				url: 'api/recognize',
+				url: 'api/chat',
 				data: ajaxData,
 				success: processOK,
 				error: processNotOK
