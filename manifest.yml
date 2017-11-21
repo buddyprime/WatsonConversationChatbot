@@ -1,0 +1,12 @@
+applications:
+- path: .
+  memory: 256M
+  disk_quota: 512M
+  instances: 1
+  name: chat-challenge-jrs
+hosts:
+  - chat-challenge-jrs-20171121
+services:
+  - Conversation-au
+env:
+  WORKSPACE_ID: 4a63ebf2-3942-41e5-af8c-f0a492c81a97

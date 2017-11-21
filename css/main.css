@@ -1,0 +1,9 @@
+.page-container {
+	text-align: center;
+    border: 3px solid green;
+}
+
+.result-container {
+	text-align: center;
+    border: 3px solid blue;
+}
