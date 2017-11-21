@@ -10,13 +10,16 @@ function onTextClick() {
 		function createnewText(text){
 			return $('<div></div>').text(text);
 		}
+		function createnewTextPre(text){
+			return $('<pre></pre>').html(text);
+		}
 		function processOK(response) {
 			console.log('OK');
 			$('#loading').hide();
 			//$('#id_contextdump').prepend(createnewText('Response from Watson: ' + response.output.text));
 			$('#id_contextdump').prepend(createnewText(JSON.stringify(response.output.text, null, 2)));
         	$('#id_contextdump').show();
-        	$('#conversation_output').prepend(formatJSON(JSON.stringify(response), false));
+        	$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response), false)));
         }
            
     	function processNotOK(err) {
