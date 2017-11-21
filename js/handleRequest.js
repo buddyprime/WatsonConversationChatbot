@@ -12,10 +12,10 @@ function onTextClick() {
 		function processOK(response) {
 			console.log('OK');
 			$('#loading').hide();
-			$('#id_contextdump').prepend(createnewText('Response from Watson: ' + response.output.text));
-			//$('#id_contextdump').prepend(createnewText(response.output.text));
+			//$('#id_contextdump').prepend(createnewText('Response from Watson: ' + response.output.text));
+			$('#id_contextdump').prepend(createnewText(JSON.stringify(response.output.text, null, 2)));
         	$('#id_contextdump').show();
-        	//$('#conversation_output').val(response);
+        	$('#conversation_output').val(JSON.stringify(response, null, 2));
         }
            
     	function processNotOK(err) {
