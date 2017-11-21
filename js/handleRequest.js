@@ -1,4 +1,5 @@
 /*eslint-env jquery */
+/*globals formatJSON */
 function onTextClick() {
 		
 		function createnewDiv(src) {
