@@ -24,7 +24,7 @@ $(function(){
 	<div class="input">
 	
 		<form class="inputform" id="myForm">
-            <label for="id_chattext">Enter your image url here, please: </label>
+            <label for="id_chattext">Text</label>
             <input type="text" name="urltext" id="id_urltext" size="35"
             	onkeydown="/*eslint-disable eqeqeq, no-extra-semi, no-undef*/
             		if(event.keyCode == '13') 
@@ -59,12 +59,16 @@ $(function(){
     </div>
     <div class="modal-body">
       <p>Input for conversation api url</p>
+      <input type="text" name="new_urltext" id="new_urltext" size="35" required>
       <p>Input for conversation workspace id</p>
+      <input type="text" name="new_ws" id="new_ws" size="35" required>
       <p>Input for conversation user</p>
+      <input type="text" name="new_user" id="new_user" size="35" required>
       <p>Input for conversation password</p>
+      <input type="text" name="new_pwd" id="new_pwd" size="35" required>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal" id="closemodal">Close</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal" id="closemodal" onclick="onSubmitChange();">Submit</button>
     </div>
   </div>
 
@@ -74,8 +78,8 @@ $(function(){
  </div>
 <a href="#" onclick="toggle('conversation_output');">Conversation Output</a>
     <div id="conversation_output">
-        <pre>
-        </pre>
+        <!-- <pre>
+        </pre> -->
     </div>
     
 </body>
