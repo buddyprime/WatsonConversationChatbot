@@ -23,6 +23,16 @@ var watson_user;
 var watson_pwd;
 var watson_workspace_id;
 
+app.post("/api/new_dialog", function (request, response) {
+	//reset the variables
+	watson_url = request.body.url;
+	watson_user = request.body.user;
+	watson_pwd = request.body.pwd;
+	watson_workspace_id = request.body.workspace;
+	
+	response.send('Updated Watson API data.');
+});
+
 app.post("/api/chat", function (request, response) {  
   var userData = request.body;
   var userText = userData.context;
@@ -53,7 +63,7 @@ app.post("/api/chat", function (request, response) {
   	else {
     	console.log(JSON.stringify(res, null, 2));
     	//response.send(JSON.stringify(res, null, 2));
-    	response.send(JSON.stringify(res.output.text, null,2));
+    	response.send(JSON.stringify(res, null,2));
 	}
 
 	});
