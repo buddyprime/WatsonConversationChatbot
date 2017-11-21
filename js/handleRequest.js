@@ -15,7 +15,8 @@ function onTextClick() {
 			//$('#id_contextdump').prepend(createnewText('Response from Watson: ' + response.output.text));
 			$('#id_contextdump').prepend(createnewText(JSON.stringify(response.output.text, null, 2)));
         	$('#id_contextdump').show();
-        	$('#conversation_output').prepend(createnewText(JSON.stringify(response, null, 2)));
+        	$('#conversation_output').prepend(formatJSON(JSON.stringify(response, true)));
+//        	                          append(formatJSON(JSON.stringify(jsonobject),true));
         }
            
     	function processNotOK(err) {
