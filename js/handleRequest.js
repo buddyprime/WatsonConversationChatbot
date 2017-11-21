@@ -15,7 +15,7 @@ function onTextClick() {
 			//$('#id_contextdump').prepend(createnewText('Response from Watson: ' + response.output.text));
 			$('#id_contextdump').prepend(createnewText(response.output.text));
         	$('#id_contextdump').show();
-        	$('#conversation_output').val(response.output);
+        	$('#conversation_output').val(response);
         }
            
     	function processNotOK(err) {
