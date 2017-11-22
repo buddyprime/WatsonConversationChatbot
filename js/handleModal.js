@@ -23,10 +23,10 @@ function onSubmitChange() {
     	}
 		
 		var new_conversation = {
-			url: $('#new_urltext'),
-			workspace: $('new_ws'),
-			user: $('new_user'),
-			pwd: $('new_pwd')
+			url: $('#new_urltext').val(),
+			workspace: $('new_ws').val(),
+			user: $('new_user').val(),
+			pwd: $('new_pwd').val()
 		};
 		invokeAjax(new_conversation); 
 		//myForm.reset();
