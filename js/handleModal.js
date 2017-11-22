@@ -16,6 +16,7 @@ function onSubmitChange() {
 		$.ajax({
 				type: 'POST',
 				url: 'api/new_dialog',
+				dataType : 'json',
 				data: ajaxData,
 				success: processOK,
 				error: processNotOK
