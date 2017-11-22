@@ -26,7 +26,7 @@ var watson_workspace_id;
 app.post("/api/new_dialog", function (request, response) {
 	//reset the variables
 	var userData2 = request.body;
-	var userData3 =userData2.context;
+	var userData3 = userData2;
 	
 	console.log(JSON.stringify(userData3));
 	watson_url = userData3.url;
