@@ -28,7 +28,7 @@ app.post("/api/new_dialog", function (request, response) {
 	var userData = request.body;
 	
 	console.log(JSON.stringify(userData));
-	watson_url = userData.context.url;
+	watson_url = userData.context[0];
 	watson_user = userData.context.user;
 	watson_pwd = userData.context.pwd;
 	watson_workspace_id = userData.context.workspace;
