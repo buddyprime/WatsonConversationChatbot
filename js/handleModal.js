@@ -11,7 +11,7 @@ function onSubmitChange() {
     function invokeAjax(message) {
 		var ajaxData = {};
 		if (message) {
-			ajaxData.context = message; 
+			ajaxData = message; 
 		}
 		$.ajax({
 				type: 'POST',
