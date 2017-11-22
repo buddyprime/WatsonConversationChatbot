@@ -30,9 +30,9 @@ app.post("/api/new_dialog", function (request, response) {
 	console.log(JSON.stringify(userData2));
 	
 	watson_url = JSON.stringify(userData2.url);
-	watson_user = userData2['user'];
-	watson_pwd = userData2['pwd'];
-	watson_workspace_id = userData2['workspace'];
+	watson_user = JSON.stringify(userData2['user']);
+	watson_pwd = JSON.stringify(userData2['pwd']);
+	watson_workspace_id = JSON.stringify(userData2['workspace']);
 	console.log("Updated Watson data, watson api: " + watson_url + ", user: " + watson_user + ", pwd: " + watson_pwd + ", workspace id: " + watson_workspace_id);
 	
 	response.send("Updated Watson API data.");

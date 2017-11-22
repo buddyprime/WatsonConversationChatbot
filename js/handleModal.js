@@ -2,11 +2,11 @@
 /*eslint-disable no-unused-params, no-unused-vars*/
 function onSubmitChange() {
 	function processOK(response) {
-		console.log('OK, new conversation workspace set.');
+		console.log('OK, new conversation workspace set:' + response);
     }         
     function processNotOK(err) {
         //not ok call
-        console.log('Not OK, no new conversation workspace set.');
+        console.log('Not OK, no new conversation workspace set:' + err);
     }
     function invokeAjax(message) {
 		var ajaxData = {};
