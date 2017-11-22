@@ -24,9 +24,9 @@ function onSubmitChange() {
 		
 		var new_conversation = {
 			url: $('#new_urltext').val(),
-			workspace: $('new_ws').val(),
-			user: $('new_user').val(),
-			pwd: $('new_pwd').val()
+			workspace: $('#new_ws').val(),
+			user: $('#new_user').val(),
+			pwd: $('#new_pwd').val()
 		};
 		invokeAjax(new_conversation); 
 		//myForm.reset();
