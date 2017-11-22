@@ -20,29 +20,6 @@ $(function(){
 </head>
 <body>
 
-<div class="page-container" style="background: #1fbda6>
-	<div class="input">
-	
-		<form class="inputform" id="myForm">
-            <label for="id_chattext">Text</label>
-            <input type="text" name="urltext" id="id_urltext" size="35"
-            	onkeydown="/*eslint-disable eqeqeq, no-extra-semi, no-undef*/
-            		if(event.keyCode == '13') 
-            			{ document.getElementById('btnSearch').click(); return false; };"
-            			data-required="true">
-            <br/><br/>
-	    </form> 
-		<button id="btnSearch" onclick="onTextClick();">Send</button>
-	</div>
-	<div class="result-container">
-	    <div id="loading"> Loading... 
-	    <img src="img/ajax-loader.gif" alt="loader"></img>
-	    </div>
-	    <div id="id_contextdump"></div>
-	    
-	</div>
-</div>
-
 <div class="container">
 <!-- Trigger the modal with a button -->
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Change Workspace</button>
@@ -74,8 +51,31 @@ $(function(){
 
 </div>
 </div>
+</div>
 
- </div>
+<div class="page-container" style="background: #1fbda6>
+	<div class="input">
+	
+		<form class="inputform" id="myForm">
+            <label for="id_chattext">Text</label>
+            <input type="text" name="urltext" id="id_urltext" size="35"
+            	onkeydown="/*eslint-disable eqeqeq, no-extra-semi, no-undef*/
+            		if(event.keyCode == '13') 
+            			{ document.getElementById('btnSearch').click(); return false; };"
+            			data-required="true">
+            <br/><br/>
+	    </form> 
+		<button id="btnSearch" onclick="onTextClick();">Send</button>
+	</div>
+	<div class="result-container">
+	    <div id="loading"> Loading... 
+	    <img src="img/ajax-loader.gif" alt="loader"></img>
+	    </div>
+	    <div id="id_contextdump"></div>
+	    
+	</div>
+</div>
+
 <a href="#" onclick="toggle('conversation_output');">Conversation Output</a>
     <div id="conversation_output">
         <!-- <pre>

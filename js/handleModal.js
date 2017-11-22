@@ -1,4 +1,33 @@
+/*eslint-env jquery */
+/*eslint-disable no-unused-params */
 function onSubmitChange() {
-	
-	
+	function processOK(response) {
+		console.log('OK, new conversation workspace set.');
+    }         
+    function processNotOK(err) {
+        //not ok call
+        console.log('Not OK, no new conversation workspace set.');
+    }
+    function invokeAjax(message) {
+		var ajaxData = {};
+		if (message) {
+			ajaxData.context = message; 
+		}
+		$.ajax({
+				type: 'POST',
+				url: 'api/new_dialog',
+				data: ajaxData,
+				success: processOK,
+				error: processNotOK
+			});
+    	}
+		
+		var new_conversation = {
+			url: $('#new_urltext'),
+			workspace: $('new_ws'),
+			user: $('new_user'),
+			pwd: $('new_pwd')
+		};
+		invokeAjax(new_conversation); 
+		//myForm.reset();
 }

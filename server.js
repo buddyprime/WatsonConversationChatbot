@@ -25,10 +25,12 @@ var watson_workspace_id;
 
 app.post("/api/new_dialog", function (request, response) {
 	//reset the variables
-	watson_url = request.body.url;
-	watson_user = request.body.user;
-	watson_pwd = request.body.pwd;
-	watson_workspace_id = request.body.workspace;
+	var userData = request.body;
+	var userDialog = userData.context;
+	watson_url = userDialog.url;
+	watson_user = userDialog.user;
+	watson_pwd = userDialog.pwd;
+	watson_workspace_id = userDialog.workspace;
 	
 	response.send('Updated Watson API data.');
 });
