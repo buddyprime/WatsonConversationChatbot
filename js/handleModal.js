@@ -28,6 +28,7 @@ function onSubmitChange() {
 			user: $('#new_user').val(),
 			pwd: $('#new_pwd').val()
 		};
+		console.log(JSON.stringify(new_conversation));
 		console.log('sending request to server...');
 		invokeAjax(new_conversation); 
 		//myForm.reset();

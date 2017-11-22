@@ -31,8 +31,9 @@ app.post("/api/new_dialog", function (request, response) {
 	watson_user = userDialog.user;
 	watson_pwd = userDialog.pwd;
 	watson_workspace_id = userDialog.workspace;
+	console.log("Updated Watson data.");
 	
-	response.send('Updated Watson API data.');
+	response.send("Updated Watson API data.");
 });
 
 app.post("/api/chat", function (request, response) {  
