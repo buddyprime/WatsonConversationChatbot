@@ -1,5 +1,5 @@
 /*eslint-env jquery */
-/*eslint-disable no-unused-params */
+/*eslint-disable no-unused-params, no-unused-vars*/
 function onSubmitChange() {
 	function processOK(response) {
 		console.log('OK, new conversation workspace set.');
