@@ -77,6 +77,6 @@ function onTextClick() {
         $('#id_contextdump').show();
 		
 		//$('#id_urltext').val('Fortsätt skriva här, tack!');
-		$('#id_urltext').val('...');
+		$('#id_urltext').val('');
 		invokeAjax(temp_url); 
 }
