@@ -77,5 +77,5 @@ function onTextClick() {
         $('#id_contextdump').show();
 		
 		invokeAjax(temp_url); 
-		//myForm.reset();
+		$('#myForm').reset();
 }
