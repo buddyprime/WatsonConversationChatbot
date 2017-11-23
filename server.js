@@ -57,7 +57,8 @@ app.post("/api/chat", function (request, response) {
   	username: watson_user,
   	password: watson_pwd,
   	version: 'v1',
-	version_date: '2017-05-26'
+	version_date: '2017-05-26',
+	url: watson_url
   });
 
   
