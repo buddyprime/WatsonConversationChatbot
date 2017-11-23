@@ -9,6 +9,11 @@
     */
 }
 
+.result-container2 {
+	text-align: center;
+    border: 3px solid green;    
+}
+
 html {
     font-size:12px;
 }
