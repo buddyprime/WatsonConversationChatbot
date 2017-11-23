@@ -2,11 +2,12 @@
 /*globals formatJSON */
 function onTextClick() {
 		
+		/*
 		function createnewDiv(src) {
 			var html_code = '<img src=\"' + src + '\" alt=\"the image\" width="250">';
 			return $('<div></div>').html(html_code);
 			
-		}
+		}*/
 		function createnewText(text){
 			return $('<div></div>').text(text);
 		}
@@ -17,7 +18,8 @@ function onTextClick() {
 			console.log('OK');
 			$('#loading').hide();
 			//$('#id_contextdump').prepend(createnewText('Response from Watson: ' + response.output.text));
-			$('#id_contextdump').prepend(createnewText(JSON.stringify(response.output.text, null, 2)));
+			//$('#id_contextdump').prepend(createnewText(JSON.stringify(response.output.text, null, 2)));
+			$('#id_contextdump').prepend(createnewText(response.output.text[0]));
         	$('#id_contextdump').show();
         	$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response), false)));
         }
