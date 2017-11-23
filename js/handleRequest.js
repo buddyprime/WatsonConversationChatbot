@@ -78,4 +78,5 @@ function onTextClick() {
 		
 		invokeAjax(temp_url); 
 		$('#myForm').reset();
+		$('#id_urltext').val(" ");
 }
