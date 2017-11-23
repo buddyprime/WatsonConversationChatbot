@@ -65,10 +65,10 @@ function onTextClick() {
         
 		var temp_url = $('#id_urltext').val();
 		if (!temp_url) {
-		   $('#id_urltext').val('Enter a chat message here, please!');
+		   $('#id_urltext').val('Skriv ditt meddelande här, tack!');
 		   return;
         } 
-        if (temp_url === 'Enter a chat message here, please!') {
+        if (temp_url === 'Skriv ditt meddelande här, tack!') {
         	return;
         } 
 
@@ -76,7 +76,7 @@ function onTextClick() {
 		$('#id_contextdump').prepend(createnewText('You', temp_url));
         $('#id_contextdump').show();
 		
+		//$('#id_urltext').val('Fortsätt skriva här, tack!');
+		$('#id_urltext').val('...');
 		invokeAjax(temp_url); 
-		$('#myForm').reset();
-		$('#id_urltext').val("Skriv din fråga här.");
 }
