@@ -10,10 +10,10 @@ function onTextClick() {
 		}*/
 		function createnewText(who, text){
 			if (who === 'Bot') {
-				return $('<div class="messages"></div>').text(text);
+				return $('<div class="messages from-watson message-inner"></div>').text(text);
 			}
 			if (who === 'You') {
-				return $('<div class="messages from-user"></div>').text(text);
+				return $('<div class="messages from-user messages-inner"></div>').text(text);
 			}
 			return $('<div></div>').text(text);
 		}
