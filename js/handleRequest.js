@@ -1,5 +1,6 @@
 /*eslint-env jquery */
 /*globals formatJSON */
+/*eslint-disable no-unused-vars */
 function onTextClick() {
 		
 		/*
@@ -10,7 +11,22 @@ function onTextClick() {
 		}*/
 		function createnewText(who, text){
 			if (who === 'Bot') {
-				return $('<div class="from-watson top"></div>').text(text);
+				return $('<div class=\"segments load\">\
+							<div class=\"from-watson top\">\
+								<div class=\"message-inner\">\
+									<p>test</p>\
+								</div>\
+							</div>\
+					 	</div>').text(text);
+				/*
+				<div class="segments load">
+          	      <div class="{{clazz}}">
+                    <div class="message-inner">
+                        <p>{{text}}</p>
+                    </div>
+                	</div>
+            	</div>
+            	*/
 			}
 			if (who === 'You') {
 				return $('<div class="from-user top"></div>').text(text);
