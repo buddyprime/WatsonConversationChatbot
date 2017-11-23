@@ -40,7 +40,7 @@ function onTextClick() {
 			//$('#id_contextdump').prepend(createnewText(JSON.stringify(response.output.text, null, 2)));
 			$('#id_contextdump').prepend(createnewText('Bot', response.output.text[0]));
         	$('#id_contextdump').show();
-        	$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response), false)));
+        	$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response, null, 2), false)));
         }
            
     	function processNotOK(err) {

@@ -1,3 +1,4 @@
+/*eslint-disable no-unused-vars */
 function formatJSON(json,textarea) {
     var nl;
     if(textarea) {
@@ -6,6 +7,7 @@ function formatJSON(json,textarea) {
         nl = "<br>";
     }
     var tab = "&#160;&#160;&#160;&#160;";
+    var indent = "";
     var ret = "";
     var numquotes = 0;
     var betweenquotes = false;
@@ -31,7 +33,7 @@ function formatJSON(json,textarea) {
             ret += nl;
             continue;
         }
-        if(c == '{' && !betweenquotes) {
+        if(c == '{' && !betweenquotes) {      	
             ret += tab;
             ret += c;
             ret += nl;
