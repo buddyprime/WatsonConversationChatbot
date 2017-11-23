@@ -3,15 +3,16 @@
     border: 3px solid green;
 }
 
-.result-container {
+.result-container { /* csslint allow: empty-rules */
 	/*text-align: center;
     border: 3px solid blue;
     */
 }
 
-.result-container2 {
+.send-button-container2 {
 	text-align: center;
-    border: 3px solid green;    
+    border: 3px solid green; 
+    width: 100%;
 }
 
 html {
