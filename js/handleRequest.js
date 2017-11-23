@@ -8,7 +8,13 @@ function onTextClick() {
 			return $('<div></div>').html(html_code);
 			
 		}*/
-		function createnewText(text){
+		function createnewText(who, text){
+			if (who === 'Bot') {
+				return $('<div class="messages"></div>').text(text);
+			}
+			if (who === 'You') {
+				return $('<div class="messages from-user"></div>').text(text);
+			}
 			return $('<div></div>').text(text);
 		}
 		function createnewTextPre(text){
@@ -19,7 +25,7 @@ function onTextClick() {
 			$('#loading').hide();
 			//$('#id_contextdump').prepend(createnewText('Response from Watson: ' + response.output.text));
 			//$('#id_contextdump').prepend(createnewText(JSON.stringify(response.output.text, null, 2)));
-			$('#id_contextdump').prepend(createnewText(response.output.text[0]));
+			$('#id_contextdump').prepend(createnewText('Bot', response.output.text[0]));
         	$('#id_contextdump').show();
         	$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response), false)));
         }
@@ -31,9 +37,6 @@ function onTextClick() {
         	$('#id_contextdump').show();
     	}
     	function invokeAjax(message) {
-        	//var contextdata = $('#id_urltext').data('convContext');
-			//var contextdata = message;
-			//var ajaxData = "msgdata=" + message;
 			var ajaxData = {};
 			if (message) {
 				ajaxData.context = message; 
@@ -49,15 +52,15 @@ function onTextClick() {
         
 		var temp_url = $('#id_urltext').val();
 		if (!temp_url) {
-		   $('#id_urltext').val('Enter an image url, please!');
+		   $('#id_urltext').val('Enter a chat message here, please!');
 		   return;
         } 
-        if (temp_url === 'Enter an image url, please!') {
+        if (temp_url === 'Enter a chat message here, please!') {
         	return;
         } 
 
     	$('#loading').show();
-		//$('#id_contextdump').prepend(createnewDiv($('#id_urltext').val()));
+		$('#id_contextdump').prepend(createnewText('You', temp_url));
         $('#id_contextdump').show();
 		
 		invokeAjax(temp_url); 

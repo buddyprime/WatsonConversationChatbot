@@ -6,7 +6,7 @@ function onSubmitChange() {
     }         
     function processNotOK(err) {
         //not ok call
-        console.log('Not OK, no new conversation workspace set:' + JSON.stringify(err));
+        console.log('Not OK, no new conversation workspace set: ' + JSON.stringify(err));
     }
     function invokeAjax(message) {
 		var ajaxData = {};
@@ -21,7 +21,7 @@ function onSubmitChange() {
 				success: processOK,
 				error: processNotOK
 			});
-    	}
+    }
 		
 		var new_conversation = {
 			url: $('#new_urltext').val(),
