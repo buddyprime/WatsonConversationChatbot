@@ -6,7 +6,7 @@ function onSubmitChange() {
     }         
     function processNotOK(err) {
         //not ok call
-        console.log('Not OK, no new conversation workspace set:' + err);
+        console.log('Not OK, no new conversation workspace set:' + JSON.stringify(err));
     }
     function invokeAjax(message) {
 		var ajaxData = {};
