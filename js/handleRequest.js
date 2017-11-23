@@ -78,5 +78,5 @@ function onTextClick() {
 		
 		invokeAjax(temp_url); 
 		$('#myForm').reset();
-		$('#id_urltext').val(" ");
+		$('#id_urltext').val("Skriv din fråga här.");
 }
