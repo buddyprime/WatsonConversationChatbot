@@ -7,3 +7,13 @@
 	text-align: center;
     border: 3px solid blue;
 }
+
+html {
+    font-size:12px;
+}
+
+body {
+    font-family: 'Open Sans Regular', Verdana, sans-serif;
+    color: #333;
+    padding:20px 10% 20px 10%;
+}
