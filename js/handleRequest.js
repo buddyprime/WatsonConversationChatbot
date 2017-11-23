@@ -29,7 +29,13 @@ function onTextClick() {
             	*/
 			}
 			if (who === 'You') {
-				return $('<div class="from-user top"></div>').text(text);
+				return $('<div class=\"segments load\">\
+							<div class=\"from-user top\">\
+								<div class=\"message-inner\">\
+									<p>test</p>\
+								</div>\
+							</div>\
+					 	</div>').text(text);
 			}
 			return $('<div></div>').text(text);
 		}
