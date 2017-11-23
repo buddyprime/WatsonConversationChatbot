@@ -22,7 +22,7 @@ body {
 .chat {
     border-radius: 15px;
     padding:30px;
-    border:7px solid #ffdd55;
+    border:7px solid green;
 }
 
 h2 {

@@ -29,7 +29,10 @@ function onTextClick() {
             	*/
 			}
 			if (who === 'You') {
-				return $('<div class=\"segments load\"><div class=\"from-user top\"><div class=\"message-inner\"><p>test</p></div></div></div>').text(text);
+				//var a = 'Hello', b = 'World';
+                //console.log(`The computer says ${ a.toUpperCase() }, ${b}!`);
+                // Prints "The computer says HELLO, World!"
+				return $(`<div class=\"segments load\"><div class=\"from-user top\"><div class=\"message-inner\"><p>${text}</p></div></div></div>`);
 			}
 			return $('<div></div>').text(text);
 		}
