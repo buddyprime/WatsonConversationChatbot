@@ -36,7 +36,6 @@ label {
     font-size:1.25em;
 }
   
-/*  
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -63,7 +62,6 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #e8c63f;
 }
-*/
 
 #conversation_output {
     display:none;
