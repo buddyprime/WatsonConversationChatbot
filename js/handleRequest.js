@@ -41,7 +41,7 @@ function onTextClick() {
 			$('#id_contextdump').prepend(createnewText('Bot', response.output.text[0]));
         	$('#id_contextdump').show();
         	//$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response, null, 2), false)));
-        	$('#conversation_output').prepend(createnewTextPre(JSON.stringify(response, null, 2), false));
+        	$('#conversation_output').prepend(createnewTextPre(JSON.stringify(response, null, 2), false));       	
         }
            
     	function processNotOK(err) {
@@ -52,8 +52,8 @@ function onTextClick() {
     	}
     	function invokeAjax(message) {
 			var ajaxData = {};
-			if (message) {
-				ajaxData.context = message; 
+			if (message) { 
+				ajaxData.text = message;
 			}
 			$.ajax({
 				type: 'POST',

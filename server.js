@@ -22,6 +22,7 @@ var watson_url;
 var watson_user;
 var watson_pwd;
 var watson_workspace_id;
+var userContext = "";
 
 app.post("/api/new_dialog", function (request, response) {
 	//reset the variables
@@ -45,7 +46,8 @@ app.post("/api/new_dialog", function (request, response) {
 
 app.post("/api/chat", function (request, response) {  
   var userData = request.body;
-  var userText = userData.context;
+  var userText = userData.text;
+  
   if(!watson_url) {
     console.log("No Watson.");
     response.send("Watson is sleeping and couldn't read " + userText + "!");
@@ -63,7 +65,8 @@ app.post("/api/chat", function (request, response) {
   
   var params = {
   	workspace_id: watson_workspace_id,
-  	input: {'text': userText}
+  	input: {'text': userText},
+  	context: { 'conversation_id': userContext }
   };
 
   conversation.message(params, function(err, res) {
@@ -73,6 +76,8 @@ app.post("/api/chat", function (request, response) {
 	}
   	else {
     	console.log(JSON.stringify(res, null, 2));
+    	//save context
+    	userContext = res.context.conversation_id;
     	//response.send(JSON.stringify(res, null, 2));
     	response.send(res);
 	}
