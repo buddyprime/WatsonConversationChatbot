@@ -22,7 +22,7 @@ var watson_url;
 var watson_user;
 var watson_pwd;
 var watson_workspace_id;
-var userContext = "";
+var userContext = {};
 
 app.post("/api/new_dialog", function (request, response) {
 	//reset the variables
@@ -76,8 +76,9 @@ app.post("/api/chat", function (request, response) {
 	}
   	else {
     	console.log(JSON.stringify(res, null, 2));
+    	console.log(JSON.stringify(res.context, null, 2));
     	//save context
-    	userContext = res.context.conversation_id;
+    	userContext = res.context;
     	//response.send(JSON.stringify(res, null, 2));
     	response.send(res);
 	}
