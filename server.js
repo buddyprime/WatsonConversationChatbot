@@ -66,7 +66,7 @@ app.post("/api/chat", function (request, response) {
   var params = {
   	workspace_id: watson_workspace_id,
   	input: {'text': userText},
-  	context: { 'conversation_id': userContext }
+  	context: userContext 
   };
 
   conversation.message(params, function(err, res) {
