@@ -42,6 +42,7 @@ function onTextClick() {
 			$('#usercontext').val(JSON.stringify(response.context, null, 2));
 			$('#id_contextdump').prepend(createnewText('Bot', response.output.text[0]));
 			$('#bot_conf').val(response.intents[0].confidence);
+			$('#id_contextdump').prepend(response.intents[0].confidence);
         	$('#id_contextdump').show();
         	//$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response, null, 2), false)));
         	$('#conversation_output').prepend(createnewTextPre(JSON.stringify(response, null, 2), false));       	
