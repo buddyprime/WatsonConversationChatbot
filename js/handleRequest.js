@@ -10,7 +10,7 @@ function onTextClick() {
 			
 		}*/
 		function createnewBar(score) {
-			return $(`<div class=\"bar\" class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><div class=\”columns\”><div class=\”column is-2 has-text-right\”>confidence</div><div class=\"column\"><progress class=\”progress-good\” value=\“${score}\” max=\"100\"></progress></div><div class=\”column is-2\”>${score}%</div></div></div></div></div>`);			
+			return $(`<div class=\"bar\" class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><div class=\”columns\”><div class=\”column is-2 has-text-right\”>confidence</div><div class=\"column\"><progress class=\”progress-verygood\” value=\“${score}\” max=\"100\"></progress></div><div class=\”column is-2\”>${score}%</div></div></div></div></div>`);			
 		}
 		function createnewText(who, text){
 			if (who === 'Bot') {
