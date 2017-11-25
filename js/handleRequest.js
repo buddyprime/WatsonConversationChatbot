@@ -10,7 +10,7 @@ function onTextClick() {
 			
 		}*/
 		function createnewBar(score) {
-			return $(`<div class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><p>${score}</p><div class=\"column\"><progress class=\"progress progress-good is-medium\" value=\"${score}\" max=\"100\"></progress></div></div></div></div>`);			
+			return $(`<div id=\"bar\" class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><div class=\"column\"><progress class=\"progress progress-good is-medium\" value=\"${score}\" max=\"100\"></progress>${score}</div></div></div></div>`);			
 		}
 		function createnewText(who, text){
 			if (who === 'Bot') {
@@ -44,7 +44,7 @@ function onTextClick() {
 			//save context
 			$('#usercontext').val(JSON.stringify(response.context, null, 2));
 			$('#id_contextdump').prepend(createnewText('Bot', response.output.text[0]));
-			$('#id_contextdump').prepend(createnewBar(response.intents[0].confidence));
+			$('#id_contextdump').prepend(createnewBar(response.intents[0].confidence.toFixed(2)*100));
         	$('#id_contextdump').show();
         	//$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response, null, 2), false)));
         	$('#conversation_output').prepend(createnewTextPre(JSON.stringify(response, null, 2), false));       	
