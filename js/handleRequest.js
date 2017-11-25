@@ -11,7 +11,7 @@ function onTextClick() {
 		}*/
 		function createnewText(who, text){
 			if (who === 'Bot') {
-				return $(`<div class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><p>${text}</p></div></div></div>`);
+				return $(`<div class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><div class=\"bot_conf\"><p>${text}</p></div></div></div></div>`);
 				/*
 				<div class="segments load">
           	      <div class="{{clazz}}">
@@ -41,6 +41,7 @@ function onTextClick() {
 			//save context
 			$('#usercontext').val(JSON.stringify(response.context, null, 2));
 			$('#id_contextdump').prepend(createnewText('Bot', response.output.text[0]));
+			$('#bot_conf').val(response.intents[0].confidence);
         	$('#id_contextdump').show();
         	//$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response, null, 2), false)));
         	$('#conversation_output').prepend(createnewTextPre(JSON.stringify(response, null, 2), false));       	
@@ -49,7 +50,7 @@ function onTextClick() {
     	function processNotOK(err) {
         	//not ok call
         	$('#loading').hide();
-        	$('#id_contextdump').prepend(createnewText('Error in response from Watson' + err));		
+        	$('#id_contextdump').prepend(createnewText('Error in response from Watson' + JSON.stringify(err, null, 2)));	
         	$('#id_contextdump').show();
     	}
     	function invokeAjax(message) {
