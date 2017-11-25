@@ -46,7 +46,7 @@ function onTextClick() {
 			$('#usercontext').val(JSON.stringify(response.context, null, 2));
 			$('#id_contextdump').prepend(createnewText('Bot', response.output.text[0]));
 			if ('undefined' !== typeof response.intents[0].confidence)
-			    the_score = response.intents[0].confidence.toFixed(2)*100;
+			    the_score = Math.round(response.intents[0].confidence.toFixed(2)*100);
 				//the_score = (Math.round((response.intents[0].confidence*1000)/10)/100).toFixed(2);
 			$('#id_contextdump').prepend(createnewBar(the_score));
         	$('#id_contextdump').show();
