@@ -197,6 +197,11 @@ input[type=submit]:hover {
   border-top-right-radius: 10rem;
 }
 
+.from-user {
+  text-align: left;
+	margin-left:1em;
+}
+
 .from-watson .message-inner {
   position: relative;
   /* border-radius: 1.5625rem; */
