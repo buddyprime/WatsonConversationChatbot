@@ -5,7 +5,9 @@ function toggle(id) {
 }
 
 function toggleClass(tgclass) {
-	//var state=jQuery(tgclass).style.display;
-    //jQuery(tgclass).style.display=state === 'block' ? 'none' : 'block';
-    $(tgclass).hide();
+	var els = document.getElementsByClassName(tgclass);
+    for(var i=0; i<els.length; ++i){
+		var s = els[i].style;
+      	s.display = s.display==='none' ? 'block' : 'none';
+   }
 }
