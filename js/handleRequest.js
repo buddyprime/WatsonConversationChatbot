@@ -11,7 +11,7 @@ function onTextClick() {
 		}*/
 		function createnewText(who, text){
 			if (who === 'Bot') {
-				return $(`<div class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><div class=\"bot_conf\"><p>${text}</p></div></div></div></div>`);
+				return $(`<div class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><div id=\"bot_conf\"><p>${text}</p></div></div></div></div>`);
 				/*
 				<div class="segments load">
           	      <div class="{{clazz}}">
