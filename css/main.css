@@ -1,3 +1,19 @@
+.progress-verygood::-webkit-progress-value {
+	background-color: #189834;
+}
+
+.progress-good::-webkit-progress-value {	
+	background-color: #7cb34d;
+}
+
+.progress-bad::-webkit-progress-value {
+	background-color: #d96251;
+}
+
+.progress-verybad::-webkit-progress-value {
+	background-color: #de2d2d;
+}
+
 .page-container {
 	text-align: center;
     border: 3px solid green;
