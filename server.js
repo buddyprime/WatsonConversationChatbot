@@ -48,6 +48,7 @@ app.post("/api/chat", function (request, response) {
   var userData = request.body;
   var userText = userData.text;
 
+  console.log(userData.context);
   userContext = JSON.parse(userData.context);
   
   if(!watson_url) {
