@@ -43,6 +43,15 @@ Välkommen till FK:s digitala assistent!
             			{ document.getElementById('btnSearch').click(); return false; };"
             			data-required="true">
             <input type="hidden" id="usercontext" name="usercontext">
+            
+            <div class="result-container">
+	    <div id="loading">
+	    <img src="img/giphy-downsized.gif" alt="loader" width="50px"></img>
+	    </div>
+	    <div class="messages" id="id_contextdump"></div>
+	    
+	</div>
+	
             <br/><br/>
 	    </form> 
 		<button class="send-button-container2" id="btnSearch" onclick="onTextClick();">Skicka</button>
@@ -61,7 +70,7 @@ Välkommen till FK:s digitala assistent!
 <p><center><img src="https://www.ibm.com/blogs/bluemix/wp-content/uploads/2016/11/Watson-image-card.png" alt="Watson" type="png" style="width:60px;"><br>
     <i>powered by IBM Watson</i></center>
     
-<table style="width:100%">
+<table>
   <tr>
     <td>
     	<button type="button" class="btn btn-info btn-sl" onclick="toggle('bar');">Confidence bars on/off</button>
