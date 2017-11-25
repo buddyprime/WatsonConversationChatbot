@@ -5,6 +5,7 @@ function toggle(id) {
 }
 
 function toggleClass(tgclass) {
-	var state=jQuery(tgclass).style.display;
-    jQuery(tgclass).style.display=state === 'block' ? 'none' : 'block';
+	//var state=jQuery(tgclass).style.display;
+    //jQuery(tgclass).style.display=state === 'block' ? 'none' : 'block';
+    $(tgclass).hide();
 }
