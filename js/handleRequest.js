@@ -38,6 +38,8 @@ function onTextClick() {
 			$('#loading').hide();
 			//$('#id_contextdump').prepend(createnewText('Response from Watson: ' + response.output.text));
 			//$('#id_contextdump').prepend(createnewText(JSON.stringify(response.output.text, null, 2)));
+			//save context
+			$('#usercontext').val(response.context);
 			$('#id_contextdump').prepend(createnewText('Bot', response.output.text[0]));
         	$('#id_contextdump').show();
         	//$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response, null, 2), false)));
@@ -52,6 +54,8 @@ function onTextClick() {
     	}
     	function invokeAjax(message) {
 			var ajaxData = {};
+			//add context
+			ajaxData.context = $('#usercontext').val();
 			if (message) { 
 				ajaxData.text = message;
 			}

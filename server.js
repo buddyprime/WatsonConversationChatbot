@@ -47,6 +47,8 @@ app.post("/api/new_dialog", function (request, response) {
 app.post("/api/chat", function (request, response) {  
   var userData = request.body;
   var userText = userData.text;
+
+  userContext = userData.context;
   
   if(!watson_url) {
     console.log("No Watson.");
@@ -78,7 +80,7 @@ app.post("/api/chat", function (request, response) {
     	console.log(JSON.stringify(res, null, 2));
     	console.log(JSON.stringify(res.context, null, 2));
     	//save context
-    	userContext = res.context;
+    	//userContext = res.context;
     	//response.send(JSON.stringify(res, null, 2));
     	response.send(res);
 	}
