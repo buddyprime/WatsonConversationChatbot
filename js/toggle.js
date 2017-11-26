@@ -8,8 +8,9 @@ function toggleClass(tgclass) {
 	var els = document.getElementsByClassName(tgclass);
 	var currentDisplay = 'none';
 	
-	//semi toggle, set ALL to display=none xor set ALL to display=block
-	currentDisplay = els[0].style.display;
+	if ('undefined' !== typeof els) {
+		//semi toggle, set ALL to display=none xor set ALL to display=block
+		currentDisplay = els[0].style.display;
 	
 	if (currentDisplay === 'none') {
 	    for(var i=0; i<els.length; ++i){
@@ -24,4 +25,6 @@ function toggleClass(tgclass) {
       		ss.display = 'none';		
    		}
 	}
+}
+
 }
