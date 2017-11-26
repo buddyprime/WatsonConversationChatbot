@@ -20,7 +20,7 @@ function onTextClick() {
 	   		//var newDiv = $(`<div class=\"bar\" class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><div class=columns><div class=column>confidence</div><div class=\"column\"><progress class=\”progress-verygood\” value=${score} max=\"100\"></progress></div><div class=\”column\”>${score}%</div></div></div></div></div>`);
 			//newDiv.style.display = setDisplay;
 			//return newDiv;	
-			return $(`<div class=\"bar\" class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><div class=columns><div class=column>confidence</div><div class=\"column\"><progress class=\”progress-verygood\” value=${score} max=\"100\"></progress></div><div class=\”column\”>${score}%</div></div></div></div></div>`).style.display = setDisplay;			
+			return $(`<div class=\"bar\"><div class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><div class=columns><div class=column>confidence</div><div class=\"column\"><progress class=\”progress-verygood\” value=${score} max=\"100\"></progress></div><div class=\”column\”>${score}%</div></div></div></div></div>`).style.display = setDisplay;			
 		}
 		function createnewText(who, text){
 			if (who === 'Bot') {
