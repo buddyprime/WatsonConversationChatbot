@@ -45,9 +45,16 @@ function onTextClick() {
 			//save context
 			$('#usercontext').val(JSON.stringify(response.context, null, 2));
 			$('#id_contextdump').prepend(createnewText('Bot', response.output.text[0]));
-			if ('undefined' !== typeof response.intents[0].confidence)
-			    the_score = Math.round(response.intents[0].confidence.toFixed(2)*100);
-				//the_score = (Math.round((response.intents[0].confidence*1000)/10)/100).toFixed(2);
+			//check for both intents and entities
+			if ('undefined' !== typeof response.intents[0]) {
+				if ('undefined' !== typeof response.intents[0].confidence)
+				    the_score = Math.round(response.intents[0].confidence.toFixed(2)*100);
+			} else { //we have entities
+				if ('undefined' !== typeof response.entities[0]) {
+					if ('undefined' !== typeof response.entities[0].confidence)
+					 	the_score = Math.round(response.entities[0].confidence.toFixed(2)*100);
+				 }
+			}
 			$('#id_contextdump').prepend(createnewBar(the_score));
         	$('#id_contextdump').show();
         	//$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response, null, 2), false)));
