@@ -17,7 +17,8 @@ $(function(){
 	$('#loading').hide();
 	$('#id_contextdump').hide();
 	$('#conversation_output').hide();
-	$('.bar').hide();
+	$('.bar').hide(); //haha, doesn't exist yet!
+	$('#usertoggle').val('none');
 	//$('#id_urltext').val('Hej!');
 	//onTextClick();
 });
@@ -44,6 +45,7 @@ Välkommen till FK:s digitala assistent!
             			{ document.getElementById('btnSearch').click(); return false; };"
             			data-required="true">
             <input type="hidden" id="usercontext" name="usercontext">
+            <input type="hidden" id="usertoggle" name="usertoggle">
             <br/><br/>
 	    </form> 
 		<button class="send-button-container2" id="btnSearch" onclick="onTextClick();">Skicka</button>

@@ -9,6 +9,12 @@ function onTextClick() {
 			return $('<div></div>').html(html_code);
 			
 		}*/
+		function setCurrentToggle() {
+			//get the current style display value from usertoggle and set class bar
+			var els = document.getElementsByClassName('bar');
+			//assume the newly created is the first one
+			els[0].style.display = $('#usertoggle').val();  //none or block
+		}
 		function createnewBar(score) {			
 		    return $(`<div class=\"bar\"><div class=\"segments load\"><div class=\"from-watson top\"><div class=\"message-inner\"><div class="content"><div class=columns><div class="column">confidence</div><div class="column"><progress class=”progress-verygood” value=${score} max=\"100\"></progress></div><div class="column">${score}%</div></div></div></div></div></div>`);			
 		}		
@@ -56,6 +62,7 @@ function onTextClick() {
 				 }
 			}
 			$('#id_contextdump').prepend(createnewBar(the_score));
+			setCurrentToggle();
         	$('#id_contextdump').show();
         	//$('#conversation_output').prepend(createnewTextPre(formatJSON(JSON.stringify(response, null, 2), false)));
         	$('#conversation_output').prepend(createnewTextPre(JSON.stringify(response, null, 2), false));       	
