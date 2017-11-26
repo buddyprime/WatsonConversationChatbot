@@ -43,7 +43,7 @@ function onTextClick() {
 			return $('<pre></pre>').html(text);
 		}
 		function processOK(response) {
-			var the_score = 100;
+			var the_score = 0;
 			console.log('OK');
 			$('#loading').hide();
 			//$('#id_contextdump').prepend(createnewText('Response from Watson: ' + response.output.text));
