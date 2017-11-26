@@ -11,7 +11,7 @@ function onTextClick() {
 		}*/
 		function createnewBar(score) {
 			//check what display style we are using at the moment
-			var setDisplay = 'none';
+			var setDisplay = 'block';
 			var els = document.getElementsByClassName('bar');
 			if ('undefined' !== typeof els) {
 				var s = els[0].style;
