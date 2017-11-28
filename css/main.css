@@ -16,7 +16,7 @@
 
 .page-container {
 	text-align: center;
-    border: 3px solid orange;
+    border: 3px solid #ff6600;
 }
 
 .result-container { /* csslint allow: empty-rules */
@@ -27,7 +27,7 @@
 
 .send-button-container2 {
 	text-align: center;
-    border: 3px solid orange; 
+    border: 3px solid #ff6600; 
     width: 100%;
 }
 
@@ -55,7 +55,7 @@ body {
 .chat {
     border-radius: 15px;
     padding:30px;
-    border:7px solid green;
+    border:7px solid #ff6600;
 }
 
 h2 {
@@ -106,7 +106,7 @@ input[type=submit]:hover {
 .messages {
     font-family: 'Open Sans Regular', Verdana, sans-serif;
     color: #333;
-    /*border: 2px solid green;*/
+    /*border: 2px solid ;*/
 }
 
 .segments {
@@ -135,7 +135,7 @@ input[type=submit]:hover {
   color: #eee;
   letter-spacing: 0.015rem;
   line-height: 2.0rem;
-  background: green; /* #053668;  #659900; */
+  background: ; /* #053668;  #659900; */
   border-radius: 1.25rem;
   border-bottom-right-radius: 0;
   text-align: left;
@@ -145,7 +145,7 @@ input[type=submit]:hover {
 }
  
 .from-user.latest .message-inner {
-  background: green; /*#053668; /*053668*/
+  background: ; /*#053668; /*053668*/
   color: #fff;
   font-size: 2.0rem;
   line-height: 2.5rem;
@@ -175,7 +175,7 @@ input[type=submit]:hover {
   right: 0;
   height: 1rem;
   width: 1rem;
-  background: orange; /* #053668; /* #4CAF50; */
+  background: #ff6600; /* #053668; /* #4CAF50; */
 }
 
 /* This is the cut-out */
@@ -195,7 +195,7 @@ input[type=submit]:hover {
   right: 0;
   height: 3rem;
   width: 1.5rem;
-  background: orange; /*#053668;*/
+  background: #ff6600; /*#053668;*/
 }
 
 .from-user.latest .message-inner:after {
