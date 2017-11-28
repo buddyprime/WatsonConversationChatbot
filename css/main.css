@@ -98,7 +98,7 @@ input[type=submit]:hover {
 
 #conversation_output {
     display:none;
-    background:#f9f9f9;
+    background:#ff6600;  /*#f9f9f9;  #ff6600*/
     padding:2em;
 }
 
@@ -135,7 +135,7 @@ input[type=submit]:hover {
   color: #eee;
   letter-spacing: 0.015rem;
   line-height: 2.0rem;
-  background: ; /* #053668;  #659900; */
+  background: #ff6600; /* #053668;  #659900; */
   border-radius: 1.25rem;
   border-bottom-right-radius: 0;
   text-align: left;
@@ -145,7 +145,7 @@ input[type=submit]:hover {
 }
  
 .from-user.latest .message-inner {
-  background: ; /*#053668; /*053668*/
+  background: #ff6600; /*#053668; /*053668*/
   color: #fff;
   font-size: 2.0rem;
   line-height: 2.5rem;
