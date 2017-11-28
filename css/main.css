@@ -16,7 +16,7 @@
 
 .page-container {
 	text-align: center;
-    border: 3px solid green;
+    border: 3px solid #b91d47;
 }
 
 .result-container { /* csslint allow: empty-rules */
@@ -27,7 +27,7 @@
 
 .send-button-container2 {
 	text-align: center;
-    border: 3px solid green; 
+    border: 3px solid #b91d47; 
     width: 100%;
 }
 
