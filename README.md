@@ -14,12 +14,12 @@ Fork or clone the repository and deploy the app on IBM Cloud. Adjust the welcome
 
 ### Change workspace
 
-<img src="changeworkspace" height="200">
+<img src="changeworkspace.png" height="200">
 
 ### Toggle confidence scores
 
-<img src="confidencescores" height="200">
+<img src="confidencescores.png" height="200">
 
 ### View Conversation output
 
-<img src="conversationoutput" height="200">
+<img src="conversationoutput.png" height="200">
