@@ -3,10 +3,10 @@ applications:
   memory: 256M
   disk_quota: 512M
   instances: 1
-  name: chat-challenge-jrs
+  name: your-api-chat-bot
 hosts:
-  - chat-challenge-jrs-20171121
+  - <<your unique app url here>>
 services:
-  - Conversation-au
+  - <<conversation service name here>>
 env:
-  WORKSPACE_ID: 4a63ebf2-3942-41e5-af8c-f0a492c81a97
+  WORKSPACE_ID: <<add the workspace id here>>
