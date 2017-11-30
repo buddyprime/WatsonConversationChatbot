@@ -14,7 +14,7 @@ Fork or clone the repository and deploy the app on IBM Cloud. Adjust the welcome
 
 ### Change workspace
 
-<img src="docs/hangeworkspace.png" height="200">
+<img src="docs/changeworkspace.png" height="200">
 
 ### Toggle confidence scores
 
