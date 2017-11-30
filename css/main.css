@@ -98,7 +98,7 @@ input[type=submit]:hover {
 
 #conversation_output {
     display:none;
-    background:#ff6600;  /*#f9f9f9;  #ff6600*/
+    background: #f9f9f9; /* #ff6600*/
     padding:2em;
 }
 

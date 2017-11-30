@@ -23,6 +23,7 @@ var watson_user;
 var watson_pwd;
 var watson_workspace_id;
 var userContext = {};
+var conversation;
 
 app.post("/api/new_dialog", function (request, response) {
 	//reset the variables
@@ -39,6 +40,13 @@ app.post("/api/new_dialog", function (request, response) {
 	if (userData2['workspace'] !== "")
 		watson_workspace_id = userData2['workspace'];
 	
+	conversation = watson.conversation({
+  		username: watson_user,
+  		password: watson_pwd,
+  		version: 'v1',
+		version_date: '2017-05-26',
+		url: watson_url
+  	});
 	console.log("Updated Watson data, watson api: " + watson_url + ", user: " + watson_user + ", pwd: " + watson_pwd + ", workspace id: " + watson_workspace_id);
 	
 	response.send("Updated Watson API data.");
@@ -57,16 +65,7 @@ app.post("/api/chat", function (request, response) {
     response.send("Watson is sleeping and couldn't read " + userText + "!");
     return;
   }
-
-  var conversation = watson.conversation({
-  	username: watson_user,
-  	password: watson_pwd,
-  	version: 'v1',
-	version_date: '2017-05-26',
-	url: watson_url
-  });
-
-  
+ 
   var params = {
   	workspace_id: watson_workspace_id,
   	input: {'text': userText},
@@ -110,7 +109,14 @@ if (appEnv.services['conversation']) {
   watson_user = appEnv.services['conversation'][0].credentials.username;
   watson_pwd = appEnv.services['conversation'][0].credentials.password;
 
-
+  conversation = watson.conversation({
+  	username: watson_user,
+  	password: watson_pwd,
+  	version: 'v1',
+	version_date: '2017-05-26',
+	url: watson_url
+  });
+  
   var cfenv_w = require('./node-cfenv-wrapper-master/cfenv-wrapper');
   // get the app environment from Cloud Foundry
   var appEnv_w = cfenv_w.getAppEnv();
