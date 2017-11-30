@@ -12,6 +12,8 @@ Built on Node.js runtime and an express server the application uses the Watson c
 
 Fork or clone the repository and deploy the app on IBM Cloud. Adjust the welcome message in index.html and colors in CSS to fit your needs. Once the app is upp and running change the conversation workspace with the "Change Workspace"-button.
 
+The bot was developed using Swedish and some of the messages are still in the original language, but can easily be changed.
+
 ### Change workspace
 
 <img src="docs/changeworkspace.png" height="200">
