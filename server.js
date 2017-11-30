@@ -1,16 +1,11 @@
 /*eslint-disable unknown-require */
 var express = require("express");
 var app = express();
-//var connect = require("connect");
-//var app = connect();
-//var serveStatic = require('serve-static');
 
 var cfenv = require("cfenv");
 var bodyParser = require('body-parser');
 
-//app.use(serveStatic(__dirname));
 app.use(express.static(__dirname));
-// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
@@ -57,7 +52,7 @@ app.post("/api/chat", function (request, response) {
   var userText = userData.text;
 
   if (userData.context) {
-	console.log(userData.context);
+	//console.log(userData.context);
   	userContext = JSON.parse(userData.context);
   }  
   if(!watson_url) {
@@ -79,10 +74,9 @@ app.post("/api/chat", function (request, response) {
 	}
   	else {
     	console.log(JSON.stringify(res, null, 2));
-    	console.log(JSON.stringify(res.context, null, 2));
-    	//save context
+    	//console.log(JSON.stringify(res.context, null, 2));
+    	//let the receiver save the context to handle multiple requests
     	//userContext = res.context;
-    	//response.send(JSON.stringify(res, null, 2));
     	response.send(res);
 	}
 
