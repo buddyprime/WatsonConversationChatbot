@@ -1,7 +1,7 @@
 {
 	"repository": {
 		"type": "git",
-		"url": "https://git.ng.bluemix.net/johan.n.rodin/chat-challenge.git"
+		"url": ""
 	},
 	"dependencies": {
 		"connect": "^2.0.0",
